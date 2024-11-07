@@ -10,7 +10,7 @@ import java.util.List;
 import com.pe.certus.model.Venta;
 
 public class VentaDao {
-	
+
 	public List<Venta> listarVentas() {
         List<Venta> listaVentas = new ArrayList<>();
         try {

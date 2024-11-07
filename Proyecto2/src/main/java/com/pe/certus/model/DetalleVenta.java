@@ -49,7 +49,7 @@ public class DetalleVenta {
 	public void setDescuento(Double descuento) {
 		this.descuento = descuento;
 	}
-    
+
 
     @Override
     public String toString() {
@@ -57,5 +57,5 @@ public class DetalleVenta {
                 ", cantidad=" + cantidad + ", descuento=" + descuento + "]";
     }
 
-	
+
 }

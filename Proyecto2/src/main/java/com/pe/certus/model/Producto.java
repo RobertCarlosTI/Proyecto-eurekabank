@@ -4,9 +4,9 @@ public class Producto {
 	private Integer codigoProducto;
 	private String nombre;
 	private Double precio;
-	
-	
-	
+
+
+
 	public Producto() {
 		super();
 	}
@@ -54,9 +54,9 @@ public class Producto {
 	public String toString() {
 		return "Producto [codigoProducto=" + codigoProducto + ", nombre=" + nombre + ", precio=" + precio + "]";
 	}
-	
-	
-	
-	
-	
+
+
+
+
+
 }

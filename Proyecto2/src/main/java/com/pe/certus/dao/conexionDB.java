@@ -6,13 +6,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class conexionDB {
-	
+
 	private static final String usuario = "root";
 	private static final String password = "karos45";
 	private static final String url = "jdbc:mysql://localhost:3306/sysventa";
 	private static final String driver = "com.mysql.cj.jdbc.Driver";
-	
-	
+
+
 	public static Connection getConexion() {
 		Connection cn = null;
 		try {
@@ -24,7 +24,7 @@ public class conexionDB {
 	    }
 		return cn;
 	}
-	
+
 	public static void cerrarConexion(Connection cn) {
 		try {
 			cn.close();
@@ -32,7 +32,7 @@ public class conexionDB {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static void cerrarResultset(ResultSet rs) {
 		try {
 			rs.close();
@@ -40,7 +40,7 @@ public class conexionDB {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static void cerrarPreparedStatement(PreparedStatement ps) {
 		try {
 			ps.close();

@@ -9,7 +9,7 @@ import java.util.List;
 import com.pe.certus.model.DetalleVenta;
 
 public class DetalleVentaDao {
-	
+
 	public List<DetalleVenta> listarDetalleVenta() {
         List<DetalleVenta> listaDetalleVenta = new ArrayList<>();
         try {
@@ -17,7 +17,7 @@ public class DetalleVentaDao {
             Connection cn = conexionDB.getConexion();
             PreparedStatement ps = cn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
-            
+
             while (rs.next()) {
                 DetalleVenta dv = new DetalleVenta();
                 dv.setCodigoVenta(rs.getInt("codigoventa"));
@@ -33,7 +33,7 @@ public class DetalleVentaDao {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
+
         return listaDetalleVenta;
     }
 

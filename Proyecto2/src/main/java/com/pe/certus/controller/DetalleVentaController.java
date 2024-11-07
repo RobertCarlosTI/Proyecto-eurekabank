@@ -35,18 +35,18 @@ public class DetalleVentaController {
 		
 
 		System.out.println("Insertando nuevo Detalle de venta");
-        detalleventaService.insertarDetalleVenta(new DetalleVenta(3, 3, 90, 0.10));
+        detalleventaService.insertarDetalleVenta(new DetalleVenta(3, 3, 250, 0.15));
         System.out.println(detalleventaService.listarDetalleVenta());
         
 //		System.out.println("Actualizando los Detalles de Ventas");
-//		detalleventaService.actualizarDetalleVenta(new DetalleVenta(3, 4, 100, 0.20));
+//		detalleventaService.actualizarDetalleVenta(new DetalleVenta(4, 2, 300, 0.20));
 //      System.out.println(detalleventaService.listarDetalleVenta());
 		
-/*		System.out.println("Eliminando los Detalles de Venta");
-		detalleventaService.eliminarDetalleVenta(3);
-		System.out.println(detalleventaService.listarDetalleVenta());
+//		System.out.println("Eliminando los Detalles de Venta");
+//		detalleventaService.eliminarDetalleVenta(1, 1);
+//		System.out.println(detalleventaService.listarDetalleVenta());
 
- */       
+        
     }
 
 }

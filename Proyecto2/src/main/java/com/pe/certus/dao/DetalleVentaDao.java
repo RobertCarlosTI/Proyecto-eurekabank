@@ -58,14 +58,14 @@ public class DetalleVentaDao {
 
     public void actualizar(DetalleVenta detalleVenta) {
         try {
-            String sql = "UPDATE detalleventa SET codigoproducto=?, cantidad=?, descuento=? WHERE codigoventa=?";
+            String sql = "UPDATE detalleventa SET cantidad=?, descuento=? WHERE codigoventa=? AND codigoproducto=?";
             Connection cn = conexionDB.getConexion();
             PreparedStatement ps = cn.prepareStatement(sql);
 
-            ps.setInt(1, detalleVenta.getCodigoProducto());
-            ps.setInt(2, detalleVenta.getCantidad());
-            ps.setDouble(3, detalleVenta.getDescuento());
-            ps.setInt(4, detalleVenta.getCodigoVenta());
+            ps.setInt(1, detalleVenta.getCantidad());
+            ps.setDouble(2, detalleVenta.getDescuento());
+            ps.setInt(3, detalleVenta.getCodigoVenta());
+            ps.setInt(4, detalleVenta.getCodigoProducto());
             ps.executeUpdate();
 
             conexionDB.cerrarConexion(cn);
@@ -75,13 +75,14 @@ public class DetalleVentaDao {
         }
     }
 
-    public void eliminar(Integer codigoVenta) {
+    public void eliminar(Integer codigoVenta, Integer codigoproducto) {
         try {
-            String sql = "DELETE FROM detalleventa WHERE codigoventa=?";
+            String sql = "DELETE FROM detalleventa WHERE codigoventa=? AND codigoproducto=?";
             Connection cn = conexionDB.getConexion();
             PreparedStatement ps = cn.prepareStatement(sql);
 
             ps.setInt(1, codigoVenta);
+            ps.setInt(2, codigoproducto);
             ps.executeUpdate();
 
             conexionDB.cerrarConexion(cn);

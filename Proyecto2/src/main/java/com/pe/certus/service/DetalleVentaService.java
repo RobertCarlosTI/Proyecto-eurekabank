@@ -1,7 +1,6 @@
 package com.pe.certus.service;
 
 import java.util.List;
-
 import com.pe.certus.dao.DetalleVentaDao;
 import com.pe.certus.model.DetalleVenta;
 
@@ -20,8 +19,8 @@ public class DetalleVentaService {
         detalleVentaDao.actualizar(detalleVenta);
     }
 
-    public void eliminarDetalleVenta(Integer codigoVenta) {
-        detalleVentaDao.eliminar(codigoVenta);
+    public void eliminarDetalleVenta(Integer codigoVenta, Integer codigoproducto) {
+        detalleVentaDao.eliminar(codigoVenta, codigoproducto);
     }
 
 }
